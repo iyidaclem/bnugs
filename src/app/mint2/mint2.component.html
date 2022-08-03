@@ -1,0 +1,278 @@
+<div>
+
+    <!--Counter Section Start-->
+       <div class="how_to_mint_sect">
+        <div class="container how_to_mint_container">
+            <div class="bithu_title_section md-pb-20">
+                <h2><img src="../../assets/images/icon/title_shapes.svg" alt="" /></h2>
+                <h3>How to Mint Our Event NFTs in 4 Easy steps </h3>
+            </div>
+            <div class="how_to_mint_shadow">
+                <img src="../../assets/images/nft/Mesh-Grad.png" alt="" />
+            </div>
+            <div class="how_to_mint_content">
+                <ul>
+                    <li>
+                        <h4 class="green">1</h4>
+                        <p>Click on Details Button and Connect Your Wallet</p>
+                    </li>
+
+                    <li>
+                        <h4 class="blue">2</h4>
+                        <p>Select the Quantity of NFTs</p>
+                    </li>
+
+                    <li>
+                        <h4 class="yellow">3</h4>
+                        <p>Confirm the Transaction</p>
+                    </li>
+
+                    <li>
+                        <h4 class="red">4</h4>
+                        <p>Receive Your NFTs on Wallet Or OpenSea</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--Counter Section End-->
+
+    <div class="container">
+        <div class="buthu_mint_body_content">
+            <div class="mint_card_sect mt-47">
+                <div class="row">
+                    <div class="col-md-4 pb-30" *ngFor="let c of candidates" >
+                        <div class="mint_item_card text-center">
+                            <div class="mint_item_card_tag">
+                                <!-- <span><img src="../../assets/images/icon/mint_item_card_tag.svg" alt="icon" /></span> -->
+                            </div>
+                            <div class="mint_item_card_img">
+                                <span>
+                              
+                                    <!-- <video [muted]="true"   [autoplay]="false" [loop]="true" controls  preload="auto" 
+                                       [poster]="c.image" alt="../../assets/images/nft/meta.jpg" src="../../assets/video/MetaverseImmersive.mp4"
+                                      type="video/mp4" width="300px"
+                                        >                                      
+                                          </video> -->
+                                     <img [src]="c.image" alt="">
+                                
+                                </span>
+                            </div>
+                            <div class="mint_item_card_text text-center">
+                                <h4 class="mb-22 mt-21">{{c.name}}</h4>
+                                <p>{{c.party}}</p>
+                                  
+                                <button class="btn-mid-green w-100 hov_shape_show mt-22" data-bs-toggle="modal"
+                                    data-bs-target="#mintModal" (click)=" selectContract(0)">
+                                    {{DETAILS}}
+                                    <span class="hov_shape1"><img src="../../assets/images/icon/hov_shape_L_dark.svg"
+                                            alt="" /></span>
+                                    <span class="hov_shape2"><img src="../../assets/images/icon/hov_shape_L_dark.svg"
+                                            alt="" /></span>
+                                    <span class="square_hov_shape"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+            
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <!-- Bithu Footer Section Start -->
+
+    <!-- Modal Section Start-->
+    <!-- Connect Wallet Modal -->
+    <div class="connect_modal">
+        <div class="modal fade " id="connectModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal_overlay">
+                        <div class="modal_header">
+                            <h2>Connect Wallet</h2>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal_body text-center">
+                            <p>Please select a wallet to connect for start Minting your NFTs</p>
+                            <div class="connect-section">
+                                <ul class="heading-list">
+                                    <li><a href="#" onclick="Connect()"><span><img
+                                                    src="../../assets/images/icon/MetaMask.svg"
+                                                    alt="Meta-mask-Image"></span>MetaMask</a></li>
+                                    <li><a href="#"><span><img src="../../assets/images/icon/Formatic.svg"
+                                                    alt="Coinbase-Image"></span>Coinbase</a></li>
+                                    <li><a href="#"><span><img src="../../assets/images/icon/Trust_Wallet.svg"
+                                                    alt="Trust-Image"></span>Trust Wallet</a></li>
+                                    <li><a href="#"><span><img src="../../assets/images/icon/WalletConnect.svg"
+                                                    alt="Wallet-Image"></span>WalletConnect</a></li>
+                                </ul>
+                            </div>
+                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
+                                    href="#">Privacy Policy</a>.</h6>
+                        </div>
+                        <div class="modal_bottom_shape">
+                            <span class="modal_bottom_shape_left"><img src="../../assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                            <span class="modal_bottom_shape_right"><img src="../../assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Connect Wallet Modal -->
+
+    <!-- Mint Modal -->
+    <div class=" modal fade" id="mintModal" tabindex="-1" aria-hidden="true">
+
+    <div class="mint_modal" *ngIf="wc.connected==1">
+        <div  >
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal_overlay2">
+                        <div class="modal_header">
+                            <p class="text-center small"> Access to {{description}} </p>
+                            <p class="text-center small"> {{description2}} </p>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <span class="clossbtn_bg"><i class="fa-solid fa-xmark"></i></span>
+                            </button>
+                        </div>
+                        <div class="modal_body text-center">
+                            <div class="mint_img">
+                                <img [src]="mintImage"  alt="img" style="height:200px ;" />
+                            </div>
+                            <div class="mint_count_list">
+                                <ul>
+                                    <li class="">
+                                        <h5>Access Date</h5>
+                                        <h5>{{wc.eventDate |date: 'dd-MM-yyyy h:mm a'}}</h5>
+                                    </li>
+
+                                    <li>
+                                        <h5>Expired In:</h5>
+                                        <h5>
+                                            <span>{{wc.days}} days  </span>
+                                            (<span>{{wc.hours}} : </span>
+                                            <span>{{wc.minutes}} :</span>
+                                            <span>{{wc.seconds}}</span>)
+                                           
+                                            
+                                        </h5>
+                                        
+                                    </li>
+                                    <li class="">
+                                        <h6 class="">NFT: </h6>
+                                        <p class="small" style="color: rgb(9, 244, 9);">{{wc.contractAddress}}</p>
+                                    </li>
+                                    <li class="">
+                                        <h5 class="">Token IDs: </h5>
+                                        <h5 class="">{{wc.tokenID1}} {{wc.tokenID2 == null?"":' , '+wc.tokenID2}}</h5>
+                                    </li>
+                                    <li class="small">
+                                        <h5>Remaining</h5>
+                                        <h5>{{wc.maxSupply-wc.mintedAmount}}/<span>{{wc.maxSupply}}</span></h5>
+                                    </li>
+                                    <li class="small">
+                                        <h5>Price</h5>
+                                        <h5>{{wc.price}} BNB</h5>
+                                    </li>
+                                    <li class="small">
+                                        <h5>Quantity</h5>
+                                        <div class="mint_quantity_sect">
+                                            <button (click)="buttonClick_Dec()">-</button>
+                                            <input type="text" id="quantity" [value]="qty">
+                                            <button (click)="buttonClick_Inc()">+</button>
+                                        </div>
+                                        <h5><span>{{total}}</span> BNB</h5>
+                                    </li>
+
+                                </ul>
+                            </div>
+                            <button class="modal_mint_btn hov_shape_show" (click)="mintNFT()">
+                                MINT NOW
+                                <span class="hov_shape1"><img src="../../assets/images/icon/hov_shape_L_dark.svg"
+                                        alt="" /></span>
+                                <span class="hov_shape2"><img src="../../assets/images/icon/hov_shape_L_dark.svg"
+                                        alt="" /></span>
+                            </button>
+                            
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>       
+        </div>        
+    </div>
+   
+    <div class="connect_modal" *ngIf="wc.connected==0">
+        <div>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal_overlay">
+                        <div class="modal_header">
+                            <h2>Connect Wallet</h2>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                        <div class="modal_body text-center">
+                            <p>Please select a wallet to connect for start Minting your NFTs</p>
+                            <div class="connect-section">
+                                <ul class="heading-list">
+                                    <li (click)="metamaskConnect()" ><a href="#" ><span><img src="../../assets/images/icon/MetaMask.svg"
+                                            alt="Meta-mask-Image"></span>MetaMask</a></li>
+                                    <!--li><a href="#"><span><img src="../../assets/images/icon/Formatic.svg"
+                                            alt="Coinbase-Image"></span>Coinbase</a></li>
+                                    <li><a href="#"><span><img src="../../assets/images/icon/Trust_Wallet.svg"
+                                            alt="Trust-Image"></span>Trust
+                                        Wallet</a></li-->
+                                    <li (click)="walletconnect()" ><a href="#"><span><img src="../../assets/images/icon/WalletConnect.svg"
+                                            alt="Wallet-Image"></span>Mobile Wallet</a></li>
+                                  </ul>
+                            </div>
+                            <h6>By connecting your wallet, you agree to our <a href="#">Terms of Service</a> and our <a
+                                    href="#">Privacy Policy</a>.</h6>
+                        </div>
+                        <div class="modal_bottom_shape">
+                            <span class="modal_bottom_shape_left"><img src="../../assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                            <span class="modal_bottom_shape_right"><img src="../../assets/images/icon/hov_shape_L.svg"
+                                    alt="" /></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="connect_modal" *ngIf="wc.connected==2">
+        <div>
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal_overlay">
+                        <div class="modal_header">
+                            <h2>{{qty}} NFT{{qty>1?'s':''}} Minted Successfully</h2>
+                            <button data-bs-dismiss="modal" aria-label="Close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <!-- Modal Section End-->
+
+
+ 
+
+</div>
