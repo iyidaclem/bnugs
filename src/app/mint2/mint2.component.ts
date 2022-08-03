@@ -112,61 +112,61 @@ export class Mint2Component implements OnInit {
   }
   selectContract(flag:number){
     this.contractFlag = flag;
-    if(flag==0){ this.mintImage = "../../assets/images/nft/meta.jpg";
+    if(flag==0){ this.mintImage = "assets/images/nft/meta.jpg";
      this.description = "Metaverse Immersive Experience Room"
      this.description2 = "[Play VR Games]"
     }
 
-    if(flag==1){ this.mintImage = "../../assets/images/nft/conference.jpg";
+    if(flag==1){ this.mintImage = "assets/images/nft/conference.jpg";
     this.description = "Conference & Exhibitions "
     this.description2 = "[Blockchain-Art-Tech 2022]"
   }
 
-    if(flag==2){this.mintImage="../../assets/images/nft/bnugex.jpg" 
+    if(flag==2){this.mintImage="assets/images/nft/bnugex.jpg" 
     this.description = "all our Events + Android Watch"
     this.description2 = "[BNUG Exclusive NFT]"
   }
 
-    if(flag==3){this.mintImage="../../assets/images/nft/boat.png"
+    if(flag==3){this.mintImage="assets/images/nft/boat.png"
     this.description = "Networking, Cruise VIP Dinner"
     this.description2 = "[Blockchain Networking]"
   }
 
-    if(flag==4){this.mintImage="../../assets/images/nft/goodies.jpg"
+    if(flag==4){this.mintImage="assets/images/nft/goodies.jpg"
     this.description = " Conference Goodie Bag"
     this.description2 = "[Conference Goodies]"
   }
 
     if(flag==5){
-      this.mintImage="../../assets/images/nft/dubai.jpg"
+      this.mintImage="assets/images/nft/dubai.jpg"
       this.description = "Immerse Dubai | Dubai African"
       this.description2 = "[Dubai African]"
     
   }
   if(flag==6){
-    this.mintImage="../../assets/images/nft/hoodle_1.jpeg"
+    this.mintImage="assets/images/nft/hoodle_1.jpeg"
     this.description = "BNUG HOODIES-1"
       this.description2 = "[WEARABLE NFT]"
 }
 if(flag==7){
-  this.mintImage="../../assets/images/nft/hoodle_5.jpeg"
+  this.mintImage="assets/images/nft/hoodle_5.jpeg"
   this.description = "BNUG HOODIES-2"
       this.description2 = "[WEARABLE NFT]"
 
 }
 if(flag==8){
-  this.mintImage="../../assets/images/nft/hoodle_2.jpeg"
+  this.mintImage="assets/images/nft/hoodle_2.jpeg"
   this.description = "BNUG HOODIES-3"
       this.description2 = "[WEARABLE NFT]"
 }
 if(flag==9){
-  this.mintImage="../../assets/images/nft/hoodle_3.jpeg"
+  this.mintImage="assets/images/nft/hoodle_3.jpeg"
   this.description = "BNUG HOODIES-4"
   this.description2 = "[WEARABLE NFT]"
 
 }
 if(flag==10){
-  this.mintImage="../../assets/images/nft/hoodle_4.jpeg"
+  this.mintImage="assets/images/nft/hoodle_4.jpeg"
   this.description = "BNUG HOODIES-5"
   this.description2 = "[WEARABLE NFT]"
 
