@@ -15,7 +15,7 @@ export class Mint2Component implements OnInit {
   mintImage!: string;
   description!: string;
   description2!: string;
-  DETAILS = "DETAILS";
+  DETAILS = "SUPPORT";
   minted!: boolean;
 
   constructor(public wc: WalletConnectService) { }
