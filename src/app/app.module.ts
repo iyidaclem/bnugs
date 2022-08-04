@@ -24,6 +24,7 @@ import { VgCoreModule } from '@videogular/ngx-videogular/core';
 import { VgControlsModule } from '@videogular/ngx-videogular/controls';
 import { VgOverlayPlayModule } from '@videogular/ngx-videogular/overlay-play';
 import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
+import { QRCodeModule } from 'angularx-qrcode';
 
 
 @NgModule({
@@ -54,6 +55,10 @@ import { VgBufferingModule } from '@videogular/ngx-videogular/buffering';
     VgControlsModule,
     VgOverlayPlayModule,
     VgBufferingModule,
+    NgxScannerQrcodeModule,
+    QRCodeModule
+    
+
    
   ],
   exports:[],

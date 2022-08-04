@@ -17,39 +17,62 @@ export class Mint2Component implements OnInit {
   description2!: string;
   DETAILS = "SUPPORT";
   minted!: boolean;
+  copied!:boolean;
+  currentCandidate:any = {}
 
   constructor(public wc: WalletConnectService) { }
 
 
+  
 
   candidates:any = [
   { name: "Asiwaju Bola Tinubu",
     party: "APC",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/APC.png'}, 
   { name: "Atiku Abubakar",
     party: "PDP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/PDP.png'}, 
   { name: "Peter Obi",
     party: "LP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/LP.png'},
   { name: "Prince Malik Ado-Ibrahim",
     party: "YPP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/YPP.png'},
   { name: "Rabiu Musa Kwankwaso",
     party: "NNPP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/NNPP.png'},
   { name: "Omoyele Sowore",
     party: "AAC",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/AAC.png'},
   { name: "Prince Adewole Adebayo",
     party: "SDP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/SDP.png'},
   { name: "Kola Abiola",
     party: "PRP",
+    wallet:"0x8b18369cF1A684FC05feB8CF5aCAE43659D9a39a",
     image: 'assets/images/candidates/PRP.png'}
  
   ]
  
+  supportCandidate(c:any){
+    this.currentCandidate = c;
+    
+  }
+
+  copyAddress(wallet:string){
+    this.copied = true;
+    setTimeout(()=>{
+      this.copied = false;
+    },2000)
+  }
+
   walletConnect(){
     
   }
