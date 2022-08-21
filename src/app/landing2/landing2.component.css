@@ -1,0 +1,29 @@
+.heading{
+    text-align: center;
+}
+.cand{
+    border-radius: 10%;
+}
+
+.head_line{
+    text-align: center;
+    border-top: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.head_line h1{
+    background-color: #040C12;
+    margin-top: -26px!important;
+    width: fit-content;
+    text-align: center;
+    padding: 2px 10px;
+    border-radius: 100%;
+
+}
+
+div p:nth-child(even){
+    background-color: #beffbe;
+    color:black;
+}

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BigNumber } from 'ethers';
 import { WalletConnectService } from '../wallet-connect.service';
+import { Mint2Service } from './mint2.service';
 
 @Component({
   selector: 'app-mint2',
@@ -20,7 +22,11 @@ export class Mint2Component implements OnInit {
   copied!:boolean;
   currentCandidate:any = {}
 
-  constructor(public wc: WalletConnectService) { }
+  constructor(
+    public wc: WalletConnectService,
+    private mint2Service:Mint2Service,
+    private router: Router
+    ) { }
 
 
   
@@ -66,6 +72,10 @@ export class Mint2Component implements OnInit {
     
   }
 
+  changeParty(party:string){
+    this.mint2Service.changeParty(party);
+    this.router.navigateByUrl("/more")
+  }
   copyAddress(wallet:string){
     this.copied = true;
     setTimeout(()=>{

@@ -1,1 +1,136 @@
-<p>landing2 works!</p>
+<div class="container-fluid p-5" *ngIf="!dataExist">
+    <div class="row pt-5">
+        <div class="col-md-12 pt-5 text-center">
+          <h1 class="display-1">  Ops... no data</h1>
+        </div>
+    </div>
+</div>
+<div class="container-fluid p-5" *ngIf="dataExist">
+    <div class="row pt-5">
+
+        <div class="col-12">
+            <div class="heading">
+                <img class="cand p-5" [src]="'assets/images/candidates/'+party_data.image" alt="">
+                <h1>{{party_data.candidate}}</h1>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row pt-5">
+        <div class="col-md-3 offse-md-1 pt-5">
+            <div class="head_line">
+                <h1>Bio Data</h1>
+            </div>
+            <div class="intro">
+                <ul>
+                    <p *ngFor=" let bio of party_data.bio "> {{bio}}</p> <br>
+
+                    <!-- <p> DATE OF BIRTH : 19th July 1961</p> <br>
+
+                    <p> PLACE OF BIRTH: Onitsha, Nigeria</p> <br>
+
+
+                    <p> NATIONALITY: Nigerian</p> <br>
+
+                    <p> MARITAL STATUS: Married with two children</p> <br> -->
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8 offse-md-1 pt-5">
+            <div class="head_line">
+                <h1>Introductions</h1>
+            </div>
+            <div class="intro">
+
+                {{party_data.intro}}
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>EDUCATIONAL INSTITUTIONS ATTENDED</h1>
+            </div>
+
+            <div class="text-center">
+                <p *ngFor="let edu of party_data.education"> {{edu}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>PREVIOUS POSITIONS</h1>
+            </div>
+
+            <div class="text-center">
+                <p *ngFor="let pre of party_data.prev_position">{{pre}}</p>
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>MEMBERSHIP OF PROFESSIONAL ASSOCIATIONS/ORGANIZATIONS</h1>
+            </div>
+
+            <div class="text-center">
+                <p *ngFor="let prf of party_data.member_pa"> {{prf}} </p>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>MEMBERSHIP OF FEDERAL GOVERNMENT COMMITTEES</h1>
+            </div>
+          
+            <div class="text-center">
+                <p *ngFor="let mfg of party_data.member_fg"> {{mfg}}</p>
+            </div>
+        </div>
+
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>AWARDS & RECOGNITIONS</h1>
+            </div>
+
+            <div class="text-center">
+                <p *ngFor="let awards of party_data.awards">{{awards}}</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>INTRODUCTION OF CONSTITUTIONAL AND OTHER MAJOR CHANGES IN NIGERIAN POLITICS</h1>
+            </div>
+
+            <div class="text-center">
+
+                <p *ngFor="let intro_of_const of party_data.intro_of_conste"> {{intro_of_const}}</p>
+
+               
+            </div>
+        </div>
+
+        <div class="col-md-10 offset-md-1 pt-5">
+            <div class="head_line">
+                <h1>OTHER  ACHIEVEMENTS</h1>
+            </div>
+
+            <div class="text-center">
+
+                <p *ngFor="let fund_achiement of party_data.fund_achiement">{{fund_achiement}}</p>
+
+                
+
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
