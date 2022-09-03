@@ -32,7 +32,16 @@
               "src/assets/css/swiper.css",
               "src/assets/css/sc-spacing.css",
               "src/assets/css/style.css",
-              "src/assets/css/responsive.css"
+              "src/assets/css/responsive.css",
+              
+              "src/assets/mobirise/assets/web/assets/mobirise-icons2/mobirise2.css",
+              "src/assets/mobirise/assets/web/assets/mobirise-icons/mobirise-icons.css",
+              "src/assets/mobirise/assets/bootstrap/css/bootstrap.min.css",
+              "src/assets/mobirise/assets/bootstrap/css/bootstrap-grid.min.css",
+              "src/assets/mobirise/assets/bootstrap/css/bootstrap-reboot.min.css",
+              "src/assets/mobirise/assets/socicon/css/styles.css",
+              "src/assets/mobirise/assets/theme/css/style.css",
+              "src/assets/mobirise/assets/mobirise/css/mbr-additional.css"
             ],
             "scripts": [
              "src/assets/js/bootstrap.min.js",             
@@ -46,7 +55,12 @@
              "src/assets/js/plugins.js",
              "src/assets/js/faq.js",
              "src/assets/js/swiper-min.js",
-             "src/assets/js/main.js"
+             "src/assets/js/main.js",
+
+             "src/assets/mobirise/assets/bootstrap/js/bootstrap.bundle.min.js",
+            "src/assets/mobirise/assets/smoothscroll/smooth-scroll.js",
+            "src/assets/mobirise/assets/ytplayer/index.js",
+            "src/assets/mobirise/assets/theme/js/script.js"
             ]
           },
           "configurations": {
